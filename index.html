@@ -21,7 +21,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="https://dharmesh-kashyap-portfolio.herokuapp.com/" class="nav__logo"><i class="fa-solid fa-user-astronaut"></i> Dharmesh Kashyap</a>
+                    <a href="https://dharmesh-kashyap.vercel.app/" class="nav__logo"><i class="fa-solid fa-user-astronaut"></i> Dharmesh Kashyap</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -115,7 +115,7 @@
 
                             </div>
                             <div>
-                                <span class="skills__percentage">65%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
@@ -127,7 +127,7 @@
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">60%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
@@ -139,7 +139,7 @@
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">80%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                         <div class="skills__data">
@@ -151,7 +151,7 @@
                                 
                             </div>
                             <div>
-                                <span class="skills__percentage">85%</span>
+                                <span class="skills__percentage"></span>
                             </div>
                         </div>
                     </div>
@@ -286,20 +286,28 @@
                   <input class="contact__input" name="Name" type="text" placeholder="Name" required>
                   <input class="contact__input" name="email" type="email" placeholder="Email" required>
                   <textarea name="Message" cols="0" rows="4" class="contact__input"></textarea>
-                  <button class="behenchodd" type="submit">Send</button>
+                  <button class="behenchodd" type="submit">Send</button><br>
                 </form>
-                
+                <span id="msg"></span>
+
                 <script>
                   const scriptURL = 'https://script.google.com/macros/s/AKfycbwx7J4rSV1b67ypaPF9CPX58L1ht3I4BczRB6L_ZFRKrbZCTkqKVpk29UPJBmOpJKsuow/exec'
                   const form = document.forms['submit-to-google-sheet']
-                
+                  const msg = document.getElementById("msg")
+
                   form.addEventListener('submit', e => {
                     e.preventDefault()
                     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                      .then(response => console.log('Success!', response))
+                      .then(response => {
+                        msg.innerHTML = "Message sent successfully"
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        },5000)
+                        form.reset()
+                      })
                       .catch(error => console.error('Error!', error.message))
                   })
-                </script>
+                </script>
                 </div>
             </section>
         </main>
