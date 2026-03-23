@@ -41,3 +41,7 @@ The site utilizes the **Intersection Observer API** for performance-efficient an
 
 ---
 © 2026 Dharmesh Kashyap
+
+---
+
+Thank you
