@@ -1,43 +1,40 @@
 # Personal Portfolio | Data Engineering & Analytics
 
-This repository contains the source code and architectural breakdown of my personal portfolio website. The project is designed to showcase end-to-end data lifecycle management, from automated extraction to decision-ready visualizations.
+This repository contains the source code and design breakdown of my personal portfolio website. The site is built as one continuous data pipeline: raw inputs on the left, decision-ready assets on the right, and the visitor walks it by scrolling.
 
 ## 🚀 Professional Profile
-**Data Engineer & Analyst** Specializing in ETL pipelines, large-scale data processing, and automation systems. My core focus is turning raw, multi-source data into structured assets.
+**Data Engineer, Mumbai** with 2+ years of production experience delivering pipelines for NABARD and ICICI Prudential. I turn messy, multi-source data (government surveys, scheme PDFs, boundary files, Excel uploads) into structured, trustworthy assets that BI tools can consume directly.
 
 ## 🛠 Technical Stack
-* **Languages:** Python, SQL, Java, C++
-* **Data Engineering:** ETL Pipelines, Data Validation, Web Scraping (Bright Data), API Integration
-* **Databases:** PostgreSQL, MySQL, Schema Design, Query Optimization
-* **Analytics & BI:** Tableau, Streamlit, KPI Reporting, EDA
-* **Frontend:** HTML5, CSS3 (Custom Properties), Vanilla JavaScript
+* **Languages:** Python, SQL
+* **Big Data & Processing:** PySpark, Hadoop, Polars, DuckDB, Parquet, ETL Pipelines, Data Validation
+* **Databases & Modeling:** PostgreSQL, MySQL, Dimensional Modeling (staging, dimension, fact), SQL Query Optimization
+* **Backend & Cloud:** Flask, AWS
+* **Analytics & BI:** Tableau, AIV Hub, KPI Reporting, Dashboard Development
+* **Frontend (this site):** HTML5, CSS3 (Custom Properties), Vanilla JavaScript
 
 ## 📊 Key Impact Metrics
-* **670,000+** Village boundary records delivered as GeoJSON (NABARD)
-* **1.8M+** Record database designed from the schema up (ICICI Prudential)
-* **1,000+** Government scheme PDFs parsed and structured
-* **60+** Mutual fund instruments managed via automated pipelines
+* **670K+** Village boundary records delivered as GeoJSON (NABARD)
+* **5.2M+** Records in a staging-to-dimension/fact PostgreSQL warehouse (ICICI Prudential)
+* **2,500+** Government scheme PDFs extracted with validation checks
+* **60+** Mutual fund instruments consolidated by one automated recurring pipeline
+* **298** Harmonized survey variables kept consistent across 3 HCES rounds
 
 ## 📂 Featured Projects
-### 1. Lead Generation Automation Tool
-An AI-powered scraping and enrichment pipeline.
-* **Function:** Entity resolution via Groq API and zero-manual-step workflow.
-* **Tech:** Python, Groq API, Streamlit, PostgreSQL.
+### 1. Survey ETL for NABARD
+Distributed processing of raw NSO/MoSPI microdata.
+* **Function:** Standardizes 5 All-India surveys (HCES, ASUSE, AIDIS, SAS, Agriculture Census) across 3 rounds into one long-format schema that BI tools consume directly. The HCES pipeline ships as a modular Python ETL package with a full test suite.
+* **Tech:** PySpark, Hadoop, Polars, DuckDB, Parquet.
 
-### 2. NABARD Pan-India Spatial Pipeline
-End-to-end pipeline for high-volume geospatial data.
-* **Function:** Delivered 670k+ records while handling inconsistent government formats and boundary mismatches.
-* **Tech:** Python, GeoJSON, PostgreSQL, ETL.
+### 2. Data Processor: Automated File-to-Database Platform
+A Flask and PostgreSQL app for finance data upload automation (ICICI Prudential).
+* **Function:** Ingests Admin Dump and Location Vacation Excel files into staging tables, validates them, and promotes them into a dimension/fact warehouse. Includes scheduler visibility, refresh progress, conflict reporting, and a notification tray.
+* **Tech:** Python, Flask, PostgreSQL, SQL.
 
-### 3. COVID-19 Global Mortality Analysis
-Large-scale data processing and visualization.
-* **Function:** Processed 6.48M+ death records for temporal trend analysis and anomaly detection.
-* **Tech:** Tableau, Python (Pandas), SQL.
+### 3. AI-Powered News Intelligence Platform
+News scraping, AI enrichment, and chat platform built for NABARD.
+* **Function:** A multi-source scraper extracts, cleans, and structures articles into a database feeding a live dashboard, with AI enrichment for classification, summarization, and search plus an interactive commodities ticker.
 
-## ⚙️ Core Philosophy: "Automation-First"
-> "If a workflow can be automated, it will be. That's not a preference. It's a standard."
-
-The site utilizes the **Intersection Observer API** for performance-efficient animations and custom JavaScript for real-time counter increments, ensuring a premium user experience without external library bloat.
 
 ---
 © 2026 Dharmesh Kashyap
