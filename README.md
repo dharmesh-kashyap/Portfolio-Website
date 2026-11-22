@@ -4,7 +4,7 @@ This repository contains the source code and design breakdown of my personal por
 
 ## 🚀 Professional Profile
 
-**Data Engineer, Mumbai** with nearly 2 years of production experience delivering pipelines for NABARD and ICICI Prudential. I turn messy, multi-source data (government surveys, scheme PDFs, boundary files, Excel uploads) into structured, trustworthy assets that BI tools can consume directly.
+**Data Engineer, Mumbai** with 2 years of production experience delivering pipelines for NABARD and ICICI Prudential. I turn messy, multi-source data (government surveys, scheme PDFs, boundary files, Excel uploads) into structured, trustworthy assets that BI tools can consume directly.
 
 ## 🛠 Technical Stack
 
